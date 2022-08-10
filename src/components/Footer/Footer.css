@@ -1,0 +1,145 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__container {
+    width: calc(100% - 208px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__copyrights {
+    font-family: var(--roboto);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--custom-gray);
+    margin-top: 32px;
+    margin-bottom: 26px;
+}
+
+.footer__navigation {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 28px;
+}
+
+.footer__links {
+    display: flex;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--dark);
+    font-family: var(--roboto);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.footer__link:first-of-type {
+    width: 112px;
+}
+
+.footer__link:nth-of-type(2) {
+    width: 192px;
+}
+
+.footer__icons {
+    display: flex;
+    margin-left: 42px;
+}
+
+.footer__link:hover {
+    cursor: pointer;
+}
+
+.footer__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.footer__icon:hover {
+    cursor: pointer;
+}
+
+.footer__icon:first-of-type {
+    margin-right: 28px;
+}
+
+@media screen and (max-width: 950px) {
+   
+    .footer__container {
+        width: calc(100% - 80px);
+    }
+
+    .footer__copyrights {
+        margin-top: 24px;
+        margin-bottom: 18px;
+    }
+
+    .footer__navigation {
+        margin-top: 21px;
+        margin-bottom: 21px;
+    }
+
+    .footer__link:first-of-type {
+        width: 88px;
+    }
+
+    .footer__link:nth-of-type(2) {
+        width: 172px;
+    }
+
+    .footer__icons {
+        margin-left: 26px;
+    }
+
+    .footer__icon:first-of-type {
+        margin-right: 27px;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .footer__container {
+        flex-direction: column-reverse;
+        width: 288px;
+    }
+
+    .footer__copyrights {
+        margin-bottom: 22px;
+        margin-top: 38px;
+    }
+
+    .footer__navigation {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    
+    .footer__links {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 74px;
+        text-align: start;
+        margin-right: 18px;
+        width: 200px;
+    }
+
+    .footer__link:first-of-type {
+        width: 55px;
+    }
+
+    .footer__icons {
+        margin-left: 0;
+    }
+
+    .footer__icon:first-of-type {
+        margin-right: 28px;
+    }
+    
+}

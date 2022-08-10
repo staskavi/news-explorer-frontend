@@ -1,0 +1,21 @@
+:root {
+    /* colors */
+    --blue: #2f71e5;
+    --blue-hover: #347eff;
+    --blue-active: #2a65cc;
+    --dark: #1a1b22;
+    --gray: #e6e8eb;
+    --custom-gray: #b6bcbf;
+    --gray-bg: #f5f6f7;
+    --white: #fff;
+    --red: #ff0000;
+    --black: #000000;
+    --border-bottom: #c4c4c4;
+
+    /* font-family */
+    --roboto: 'Roboto', sans-serif;
+    --roboto-slab: 'Roboto Slab', sans-serif;
+    --inter: 'Inter', sans-serif;
+    --source: 'Source Sans Pro', sans-serif;
+  }
+  
