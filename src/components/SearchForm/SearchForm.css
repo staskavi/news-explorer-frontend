@@ -1,0 +1,131 @@
+.search__form {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 608px;
+}
+
+.search__form-title {
+    font-family: var(--roboto-slab);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 64px;
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+
+.search__form-text {
+    font-family: var(--roboto);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 88px;
+    margin-top: 0;
+}
+
+.search__form-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.search__form-input {
+    background-color: var(--white);
+    width: 100%;
+    height: 64px;
+    border-radius: 100px;
+    border-color: transparent;
+    padding-left: 24px;
+    font-family: var(--roboto);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    box-sizing: border-box;
+}
+
+.search__form-input:focus {
+    outline: outset 2px var(--blue-hover);
+}
+
+.search__form-submit {
+    background-color: var(--blue);
+    width: 168px;
+    height: 64px;
+    border-radius: 100px;
+    border-color: transparent;
+    padding: auto;
+    font-family: var(--roboto);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--white);
+    margin-left: -160px;
+}
+
+.search__form-submit:hover {
+    background-color: var(--blue-hover);
+    cursor: pointer;
+}
+
+.search__form-submit:active {
+    background-color: var(--blue-active);
+}
+
+ @media screen and (max-width: 950px) {
+     .search__form {
+         width: 448px;
+     }
+
+     .search__form-title {
+         width: 385px;
+         font-size: 36px;
+         line-height: 40px;
+         margin-bottom: 16px;
+     }
+
+     .search__form-text {
+         margin-bottom: 48px;
+     }
+
+     .search__form-input {
+         height: 56px;
+     }
+
+     .search__form-submit {
+         height: 56px;
+         margin-left: -150px;
+     }
+ }
+
+ @media screen and (max-width: 745px) {
+     .search__form {
+         width: 288px;
+     }
+
+     .search__form-title {
+         width: 285px;
+     }
+
+     .search__form-text {
+        margin-bottom: 122px;
+     }
+
+     .search__form-container {
+         flex-direction: column;
+     }
+
+     .search__form-input {
+         padding-left: 16px;
+         margin-bottom: 16px;
+     }
+
+     .search__form-submit {
+         margin-left: 0;
+         width: 100%;
+     }
+ }

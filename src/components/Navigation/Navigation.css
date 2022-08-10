@@ -1,0 +1,106 @@
+.header__navigate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--roboto);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.header__navigate-link {
+    text-decoration: none;
+    color: var(--custom-gray);
+    margin-right: 42px;
+    padding: 0;
+}
+
+.header__navigate-link_theme_dark {
+    color: var(--dark);
+}
+
+.header__navigate-link_home {
+    border-bottom: solid 3px var(--white);
+    text-decoration: none;
+    color: var(--white);
+    margin-bottom: -26px;
+    padding-bottom: 23px;
+}
+
+.header__navigate-link_articles {
+    border-bottom: solid 3px var(--dark);
+    text-decoration: none;
+    color: var(--dark);
+    margin-bottom: -26px;
+    padding-bottom: 23px;
+}
+
+.header__navigate-link:nth-of-type(2){
+    margin-left: 34px;
+    margin-right: 83px;
+}
+
+.header__navigate-link:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+    .header__navigate {
+        font-size: 16PX;
+    }
+
+    .header__navigate-link {
+        margin-right: 16px;
+    }
+
+    .header__navigate-link:nth-of-type(2){
+        margin-left: 0;
+        margin-right: 16px;
+    }
+
+    .header__navigate-link_home {
+        padding-bottom: 19px;
+        margin-bottom: -20px;
+    }
+
+    .header__navigate-link_articles {
+        padding-bottom: 19px;
+        margin-bottom: -20px;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .header__navigate {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__navigate-link_home {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .header__navigate-link_articles {
+        border-bottom: none;
+        padding-bottom: 0;
+        color: var(--white);
+    }
+
+    .header__navigate-link {
+        height: 56px;
+        margin-right: 0;
+        padding-top: 16px;
+        box-sizing: border-box;
+        color: var(--white);
+    }
+
+    .header__navigate-link_theme_dark {
+        color: var(--white);
+    }
+
+    .header__navigate-link:nth-of-type(2) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

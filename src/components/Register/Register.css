@@ -1,0 +1,15 @@
+.popup__form-submition-error {
+    display: none;
+}
+
+.popup__form-submition-error_active {
+    display: block;
+    color: var(--red);
+    font-family: var(--inter);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0;
+    margin: 17px auto 8px;
+}
