@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && scp -r -i ~/.ssh/id_25519 ./build/* staskavi@whatsgoingintheworld.students.nomoredomainssbs.ru:/home/staskavi/frontend"
   },
   "eslintConfig": {
     "extends": [
