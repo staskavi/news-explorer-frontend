@@ -1,7 +1,7 @@
 import React from "react";
 import PopupFormInputs from "../PopupFormInputs/PopupFormInputs";
 import PopupWithForm from "../PopupWithForm/PopupWithForm";
-import { useForm } from "../useForm/useForm";
+import { useForm } from "../../utils/useForm";
 
 export default function Login({
   isOpen,

@@ -2,7 +2,7 @@ import React from "react";
 import "./Register.css";
 import PopupWithForm from "../PopupWithForm/PopupWithForm";
 import PopupFormInputs from "../PopupFormInputs/PopupFormInputs";
-import { useForm } from "../useForm/useForm";
+import { useForm } from "../../utils/useForm";
 
 export default function Register({
   isOpen,
