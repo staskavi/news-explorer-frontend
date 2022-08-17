@@ -32,13 +32,11 @@ export default function NewsCard({ card, onCardButtonClick, savedCards }) {
   const isSaved = checkForSavedCards(); 
 
   function handleCardButtonClick(e) {
-    console.log(loggedIn);//////////////////////////////////////////
     const isSavedCard = checkForSavedCards();
     
     if (isSavedCard) {
       card = isSavedCard;
     }
-    //e.target.classList.toggle("news__card-button_active");
     onCardButtonClick(card, isSaved);
   }
 
@@ -92,7 +90,7 @@ export default function NewsCard({ card, onCardButtonClick, savedCards }) {
         <p className="news__item-date">{date}</p>
         <h3 className="news__item-title">{title}</h3>
         <p className="news__item-text">{description}</p>
-        <p className="news__item-source">{source.name ? source.name.toUpperCase() :source.toUpperCase()}</p>
+        <p className="news__item-source">{source.name ? source.name.toUpperCase() : "source.toUpperCase()"}</p>
       </div>
       </a>
     </li>

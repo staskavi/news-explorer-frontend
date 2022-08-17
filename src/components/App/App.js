@@ -129,11 +129,22 @@ function App() {
       mainApi
         .getSavedCards()
         .then((res) => {
-          setSavedCards(res);
+          console.log(res);///////////////////////////
+          console.log(currentUser._id);///////////////////////////
+          let modifiedArr = res.filter(function(element){
+            console.log(element);///////////////////
+            if( element.owner === currentUser._id){
+              return element;
+            }
+            return null;
+        });
+        console.log(modifiedArr);///////////////////////////
+          setSavedCards(modifiedArr);
+        
         })
         .catch(console.log);
     }
-  }, [token]);
+  }, [token, currentUser]);
 
   function handleScreenResize() {
     if (window.innerWidth > 745) {
@@ -239,6 +250,7 @@ function App() {
       ? mainApi 
           .changeCardSaveStatus(card, isSaved, cardKeyword) 
          .then((res) => {
+           console.log(res.message);//////////////////////////////////////////////
             if (!res.message) {
               const savedCard = {
                 _id: res._id,
@@ -277,7 +289,6 @@ function App() {
           <Switch>
             <ProtectedRoute path="/saved-news" loggedIn={loggedIn}>
               <SavedNews
-                cards={cards}
                 savedCards={savedCards}
                 onCardButtonClick={handleCardButtonClick}
               />
