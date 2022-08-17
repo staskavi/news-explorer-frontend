@@ -18,7 +18,7 @@ export default function NewsCard({ card, onCardButtonClick, savedCards }) {
 
   const location = useLocation();
   const loggedIn = useContext(LoggedInContext);
-  let date = moment(publishedAt).format('LL');
+  const date = moment(publishedAt).format('LL');
  
   function checkForSavedCards() {
     // eslint-disable-next-line array-callback-return
@@ -32,12 +32,13 @@ export default function NewsCard({ card, onCardButtonClick, savedCards }) {
   const isSaved = checkForSavedCards(); 
 
   function handleCardButtonClick(e) {
+    console.log(loggedIn);//////////////////////////////////////////
     const isSavedCard = checkForSavedCards();
     
     if (isSavedCard) {
       card = isSavedCard;
     }
-    e.target.classList.toggle("news__card-button_active");
+    //e.target.classList.toggle("news__card-button_active");
     onCardButtonClick(card, isSaved);
   }
 
@@ -50,7 +51,7 @@ export default function NewsCard({ card, onCardButtonClick, savedCards }) {
           : "news__card-button news__card-button_type_delete"
            }
           ${
-            location.pathname === "/" && isSaved
+            ( location.pathname === "/" && isSaved)
               ? "news__card-button_active"
               : undefined
           }
