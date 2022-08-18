@@ -32,7 +32,7 @@ export function authorize({ email, password }) {
         localStorage.setItem('jwt', data.token)
         return data.token;
       } else {
-        throw new Error("User with specified e-mail not found!");
+        throw new Error("Wrong e-mail or password");
       }
     })
 } 

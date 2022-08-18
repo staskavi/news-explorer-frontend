@@ -10,7 +10,7 @@ export default function Header({
   onMenuClick,
   onClose,
   isNavOpen,
-  onLogOut,
+  onLogOut
 }) {
   const location = useLocation();
 
@@ -40,7 +40,7 @@ export default function Header({
             onClick={isNavOpen ? onClose : onMenuClick}
           ></button>
         ) : (
-          <Navigation onSignInClick={onSignInClick} onLogOut={onLogOut} />
+          <Navigation onSignInClick={onSignInClick} onLogOut={onLogOut}/>
         )}
       </div>
       <MobileNavigation

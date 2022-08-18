@@ -5,7 +5,6 @@ import { CurrentUserContext } from "../../context/CurrentUserContext";
 
 export default function SavedNews({ cards, savedCards, onCardButtonClick }) {
   const currentUser = useContext(CurrentUserContext);
-
   let initialKeywordsList = [];
   for (const obj of savedCards){
     initialKeywordsList.push(obj.keyword);

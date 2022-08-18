@@ -129,16 +129,12 @@ function App() {
       mainApi
         .getSavedCards()
         .then((res) => {
-          console.log(res);///////////////////////////
-          console.log(currentUser._id);///////////////////////////
           let modifiedArr = res.filter(function(element){
-            console.log(element);///////////////////
             if( element.owner === currentUser._id){
               return element;
             }
             return null;
         });
-        console.log(modifiedArr);///////////////////////////
           setSavedCards(modifiedArr);
         
         })
@@ -250,8 +246,7 @@ function App() {
       ? mainApi 
           .changeCardSaveStatus(card, isSaved, cardKeyword) 
          .then((res) => {
-           console.log(res.message);//////////////////////////////////////////////
-            if (!res.message) {
+            if (!res.deletedCount) {
               const savedCard = {
                 _id: res._id,
                 description: res.text,

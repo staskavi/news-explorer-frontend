@@ -7,7 +7,6 @@ import "./Navigation.css";
 export default function Navigation({ onSignInClick, onLogOut }) {
   
   const location = useLocation();
-
   const loggedIn = useContext(LoggedInContext);
 
   return (
@@ -31,7 +30,7 @@ export default function Navigation({ onSignInClick, onLogOut }) {
           }
           to="/saved-news"
         >
-          Saved Articles
+          Saved Articles 
         </Link>
       )}
       <NavigationButton onSignInClick={onSignInClick} onLogOut={onLogOut} />

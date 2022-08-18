@@ -90,7 +90,7 @@ export default function NewsCard({ card, onCardButtonClick, savedCards }) {
         <p className="news__item-date">{date}</p>
         <h3 className="news__item-title">{title}</h3>
         <p className="news__item-text">{description}</p>
-        <p className="news__item-source">{source.name ? source.name.toUpperCase() : "source.toUpperCase()"}</p>
+        <p className="news__item-source">{source.name}</p>
       </div>
       </a>
     </li>
