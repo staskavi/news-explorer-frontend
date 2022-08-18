@@ -129,13 +129,13 @@ function App() {
       mainApi
         .getSavedCards()
         .then((res) => {
-          let modifiedArr = res.filter(function(element){
+          let savedArticles = res.filter(function(element){
             if( element.owner === currentUser._id){
               return element;
             }
             return null;
         });
-          setSavedCards(modifiedArr);
+          setSavedCards(savedArticles);
         
         })
         .catch(console.log);
